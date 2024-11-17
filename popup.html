@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Privacy Policy Analyzer</title>
+    <style>
+        html, body {
+            width: 600px;
+            height: 400px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        #page-url {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        button {
+            background-color: #007acc;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        /* Collapsible sections */
+        details {
+            background-color: #252526;
+            border: 1px solid #333333;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Chat panel */
+        #chat-panel {
+            border: 1px solid #333333;
+            padding: 10px;
+            height: 100px;
+            overflow-y: auto;
+            background-color: #1e1e1e;
+        }
+        /* Input fields */
+        input[type="text"], input[type="password"], textarea, select {
+            width: 25%;
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border: 1px solid #555555;
+        }
+        /* Loading indicator */
+        #loading-indicator {
+            display: none;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        /* Message styling */
+        .message {
+            margin-bottom: 10px;
+        }
+        .message strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        /* Adjust the privacy-content section */
+        #privacy-content {
+            max-height: none;
+            overflow: visible;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy Analyzer</h1>
+    <div id="page-url">Loading URL...</div>
+    <button id="find-string">Find Privacy Policy</button>
+    <div id="result"></div>
+    <details id="privacy-section">
+        <summary>Privacy Policy Content</summary>
+        <div id="privacy-url"></div>
+        <div id="privacy-content"></div>
+    </details>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator">Loading...</div>
+
+    <!-- Chat UI -->
+    <div id="chat-ui">
+        <h2>Chat with Privacy Policy</h2>
+        <label for="api-key">OpenAI API Key:</label>
+        <input type="password" id="api-key" placeholder="Enter your OpenAI API Key">
+
+        <label for="model-selection">Select Model:</label>
+        <select id="model-selection">
+            <option value="gpt-4o-mini">gpt-4o-mini</option>
+            <option value="gpt-4o">gpt-4o</option>
+        </select>
+
+        <details>
+            <summary>System Prompt</summary>
+            <textarea id="system-prompt" rows="10">You are an expert in privacy policy analysis and consumer rights. Your task is to review the privacy policy from a website and provide an educational summary for the user. Focus on helping the user understand their rights and how the policy affects them. Structure your analysis under the following headings:
+
+***Potential Concerns or Red Flags***
+Highlight ambiguous or concerning language.
+Explain how these could impact user rights or privacy.
+
+***Educational Insights for the User***
+Provide practical advice on how users can protect their rights based on the policy.
+Suggest questions or actions users might take if they are concerned.
+Use clear and accessible language. Ensure the summary is actionable and empowers the user to make informed decisions about their privacy.
+
+***Other Important Areas of Analysis***
+*Data Collection Practices*
+- What types of data are collected (e.g., personal, financial, behavioral)?
+- Is the data collection necessary for the service, or is it excessive?
+
+*Data Usage*
+- How is the collected data used (e.g., for services, marketing, third-party sharing)?
+- Are there any unexpected uses of the data?
+
+*Third-Party Sharing and Transfers*
+- Does the policy specify sharing data with third parties or transferring it internationally?
+- Are these transfers governed by adequate safeguards (e.g., GDPR compliance)?
+
+*User Rights*
+- What rights does the policy grant to users (e.g., access, rectification, deletion, opt-out)?
+- How easy is it for users to exercise these rights?
+
+*Retention Policies*
+- How long is the data retained?
+- Are there provisions for automatic deletion after a certain period?
+
+*Security Measures*
+- What security measures are mentioned to protect user data?
+- Are there any red flags suggesting insufficient safeguards?
+
+*Cookies and Tracking*
+- What does the policy say about cookies, trackers, or other monitoring technologies?
+- Are there opt-out options for non-essential tracking?
+
+*Jurisdiction and Governing Laws*
+- Which country's laws govern the policy?
+- Are there implications for cross-border users?</textarea>
+        </details>
+
+        <div id="chat-panel">
+            <!-- Chat messages will appear here -->
+        </div>
+
+        <input type="text" id="user-message" placeholder="Type your message here" style="width: 80%;">
+        <button id="send-message">Send</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

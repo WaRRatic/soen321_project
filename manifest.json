@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Policy Extractor",
+  "version": "1.0",
+  "description": "Extracts meaningful text from privacy policy pages.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.openai.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["readability.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
