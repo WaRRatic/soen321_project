@@ -1,8 +1,8 @@
 # soen321_project
  
-# Loading the plugin into Chrome:
+# Loading the plugin into Chrome
 
-## Access Chrome's Extensions Page
+## Access Chrome's Extensions Page:
 Open Chrome and navigate to chrome://extensions/.
 
 ## Enable Developer Mode:
