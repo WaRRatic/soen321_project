@@ -23,7 +23,7 @@ If your extension includes a browser action (an icon next to the address bar), i
 
 Note that not all of the web-sites can be parsed by the plug-in due to the high variation in the way that privacy policy is presented in the HTML and Javascript. It's very hard to create a script which would parse every possible way that a privacy policy would be served, neither it is the goal of the assignment.
 
-Tested web-sites on which plugin works are:
+Tested web-sites on which plug-in works are:
 - https://www.canada.ca/en.html
 - https://www.quebec.ca/en
 - https://www.github.com
@@ -66,8 +66,9 @@ Suggest questions or actions users might take if they are concerned.
 Use clear and accessible language. Ensure the summary is actionable and empowers the user to make informed decisions about their privacy.
 
 ***Other Important Areas of Analysis***
+
 *Data Collection Practices*
-- What types of data are collected (e.g., personal, financial, behavioral)?
+- What types of data are collected (e.g., personal, financial, behavioural)?
 - Is the data collection necessary for the service, or is it excessive?
 
 *Data Usage*
@@ -103,7 +104,7 @@ Once the OpenAI API key is provided, you can click the "Send" button.
 This will initiate the call, with the following context:
 
 System prompt: as described in the previous section
-User prompt: "privacy policy text extraced from the web-site"
+User prompt: "Privacy policy text extracted from the website"
 
 You will see the User message "Privacy Policy Text" appear. After 10 seconds, the model will reply back with the analysis of the privacy policy.
 
