@@ -1,45 +1,46 @@
 # soen321_project
  
 # Load the plugin into Chrome
-##Access Chrome's Extensions Page:
+
+## Access Chrome's Extensions Page:
 
 Open Chrome and navigate to chrome://extensions/.
 
-##Enable Developer Mode:
+## Enable Developer Mode:
 In the top-right corner of the Extensions page, toggle the "Developer mode" switch to the "on" position.
 
-##Load Your Unpacked Extension:
+## Load Your Unpacked Extension:
 Click the "Load unpacked" button.
 In the dialog that appears, browse to and select the directory containing your extension files.
 
-##Verify Extension Installation:
+## Verify Extension Installation:
 After loading, your extension should appear in the list on the Extensions page.
 If your extension includes a browser action (an icon next to the address bar), it should now be visible in the Chrome toolbar.
 
-#Using plugin
+# Using plugin
 
-##Load a web-site
+## Load a web-site
 
 Note that not all of the web-sites can be parsed by the plug-in due to the high variation in the way that privacy policy is presented in the HTML and Javascript. It's very hard to create a script which would parse every possible way that a privacy policy would be served, neither it is the goal of the assignment.
 
 Tested web-sites on which plugin works are:
-https://www.canada.ca/en.html
-https://www.quebec.ca/en
-https://www.github.com
-https://openai.com/
-https://www.anthropic.com/
-https://www.netflix.com/ca/
-https://www.samsung.com/ca/
-https://www.amazon.ca/
-https://www.ikea.com/ca/en/
-https://www.symbolab.com/
+- https://www.canada.ca/en.html
+- https://www.quebec.ca/en
+- https://www.github.com
+- https://openai.com/
+- https://www.anthropic.com/
+- https://www.netflix.com/ca/
+- https://www.samsung.com/ca/
+- https://www.amazon.ca/
+- https://www.ikea.com/ca/en/
+- https://www.symbolab.com/
 
-##Find the privacy policy
+## Find the privacy policy
 
 1. Click on the "Find Privacy Policy"
 2. The policy should be found and loaded under the "Privacy Policy Content" section. Expand that section to make sure it was loaded.
 
-##Chat configuration overview
+## Chat configuration overview
 The plug-in will be making API calls to OpenAI API endpoint:
 https://api.openai.com/v1/chat/completions
 
@@ -48,8 +49,7 @@ Insert the API Key into the "OpenAI API Key" input. You can obtain by registerin
 The default model which does a good job is "gpt-4o-mini", but it can be switched to the more expensive "gpt-4o" in the "Select model" dropdown
 
 The system prompt is provided by default, but can be changed.
-View more on the role of system messages here:
-https://platform.openai.com/docs/guides/text-generation#system-messages
+View more on the role of system messages [here](https://platform.openai.com/docs/guides/text-generation#system-messages)
 
 
 Here is the system prompt, for easy reference:
@@ -98,7 +98,7 @@ Use clear and accessible language. Ensure the summary is actionable and empowers
 - Which country's laws govern the policy?
 - Are there implications for cross-border users?
 
-##Chat with the privacy policy
+## Chat with the privacy policy
 Once the OpenAI API key is provided, you can click the "Send" button.
 This will initiate the call, with the following context:
 
@@ -109,8 +109,7 @@ You will see the User message "Privacy Policy Text" appear. After 10 seconds, th
 
 At this point, you can chat in the same way as you do with ChatGPT - you will be sending API calls to the OpenAI with the context which includes the previous message, plus your new message.
 
-This creates the multi-turn conversation, on which you can view more details here:
-https://platform.openai.com/docs/guides/text-generation#conversations-and-context
+This creates the multi-turn conversation, on which you can view more details [here](https://platform.openai.com/docs/guides/text-generation#conversations-and-context)
 
 
 
