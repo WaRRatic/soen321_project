@@ -51,7 +51,7 @@ The system prompt is provided by default, but can be changed.
 View more on the role of system messages [here](https://platform.openai.com/docs/guides/text-generation#system-messages)
 
 
-Here is the system prompt, for easy reference:
+## Current system prompt, for easy reference:
 
 You are an expert in privacy policy analysis and consumer rights. Your task is to review the privacy policy from a website and provide an educational summary for the user. Focus on helping the user understand their rights and how the policy affects them. Structure your analysis under the following headings:
 
