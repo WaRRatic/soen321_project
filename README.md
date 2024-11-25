@@ -31,7 +31,6 @@ Tested web-sites on which plug-in works are:
 - https://www.netflix.com/ca/
 - https://www.samsung.com/ca/
 - https://www.amazon.ca/
-- https://www.ikea.com/ca/en/
 - https://www.symbolab.com/
 
 Websites where the plug-in cannot find the Privacy Policy:
