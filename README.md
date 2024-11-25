@@ -34,6 +34,11 @@ Tested web-sites on which plug-in works are:
 - https://www.ikea.com/ca/en/
 - https://www.symbolab.com/
 
+Websites where the plug-in cannot find the Privacy Policy:
+- https://www.reddit.com/
+- https://www.cnn.com/ - provides a URL to another website where you need to navigate to the right Country to read the PP or engage with the plug-in again to get the right URL
+- https://www.youtube.com/ -  provides a URL to another website https://policies.google.com/privacy?hl=en where you need to engage with the plug-in again to extract the PP
+
 ## Find the privacy policy
 
 1. Click on the "Find Privacy Policy"
